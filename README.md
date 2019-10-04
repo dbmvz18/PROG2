@@ -18,3 +18,6 @@ Programmierung: bspw. 2 Tage vor Erreichen des Ablaufdatums wird eine Push-Nachr
 	
 * Datenausgabe
 Benachrichtigung (Push-Nachricht, E-Mail) mit Standard-Text und Ablaufdatum (und evtl. Serviervorschläge)
+
+
+![Ablaufdiagramm](/Pfad/Ablaufdiagramm.jpg)
