@@ -1,4 +1,4 @@
-Nahrungsmittelbestand mit Ablaufdatum
+# Nahrungsmittelbestand mit Ablaufdatum
 
 ## Ausgangslage
 Die Lebensmittelverschwendung ist nach wie vor ein heissdiskutiertes Thema auf unserem Planeten. Angeblich sollen 50% der produzierten Lebensmittel weggeworfen werden. Um im eigenen Haushalt etwas dagegen zu unternehmen, soll die folgende zu programmierende Applikation unterstützend zur Verfügung stehen. 
