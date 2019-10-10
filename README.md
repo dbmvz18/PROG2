@@ -7,18 +7,18 @@ Im Restmüll sind es insgesamt rund 267.000 Tonnen Lebensmittel im Jahr, wobei G
 Um im eigenen Haushalt etwas dagegen zu unternehmen, soll die folgende zu programmierende Applikation unterstützend zur Verfügung stehen. 
 
 ## Funktion/Projektidee
-Sämtliche Nahrungsmittel werden unmittelbar nach dem Kauf erfasst (Dateneingabe). Hierbei stehen die Werte "Nahrungsmittel" und "Ablaufdatum" im Vordergrund. Somit werden die Nahrungsmittel gespeichert (Datenspeicherung). 5 bzw. 2 Tage vor Ablauf der erfassten Nahrungsmittel wird eine Benachrichtigung generiert (Datenausgabe) und dem User mitgeteilt, welches "Nahrungsmittel" in wenigen Tagen das Ablaufdatum erreichen wird. Folgerichtig kann der User entsprechend handeln und das Nahrungsmittel vor dem Ablaufdatum konsumieren. Zudem soll ein Serviervorschlag ausgegeben werden,  welcher mindestens 1x das in ablaufende Nahrungsmittel beinhaltet.
+Sämtliche Nahrungsmittel werden unmittelbar nach dem Kauf erfasst (Dateneingabe). Hierbei stehen die Werte "Nahrungsmittel" und "Ablaufdatum" im Vordergrund. Somit werden die Nahrungsmittel gespeichert (Datenspeicherung). 5 bzw. 2 Tage vor Ablauf der erfassten Nahrungsmittel wird eine Benachrichtigung generiert (Datenausgabe) und dem User mitgeteilt, welches "Nahrungsmittel" in wenigen Tagen das Ablaufdatum erreichen wird. Folgerichtig kann der User entsprechend handeln und das Nahrungsmittel vor dem Ablaufdatum konsumieren. Zudem soll ein Serviervorschlag ausgegeben werden, welcher mindestens 1x das in ablaufende Nahrungsmittel beinhaltet.
 
 ## Workflow
 
-* Dateneingabe
+* Dateneingabe:
 Nahrungsmittel erfassen (evtl. mit Bild), Ablaufdatum erfassen
 
-* Datenverarbeitung/-speicherung
-Die vom User erfassten Nahrungsmittel generieren die erste Datenbank. Eine zweite Datenbank wird die Serviervorschläge bilden (Nahrungsmittel muss mind. 1x enthalten sein).
+* Datenverarbeitung/-speicherung:
+Die vom User erfassten Nahrungsmittel generieren die erste Datenbank. Eine zweite Datenbank werden die Serviervorschläge bilden (Nahrungsmittel muss mind. 1x enthalten sein).
 	
-* Datenausgabe
-5 bzw. 2 Tage vor Erreichen des Ablaufdatums wird eine Push-Nachricht/Benachrichtigung (E-Mail/Whatsapp-Nachricht,...) ausgelöst und Serviervorschläge ausgeben.
+* Datenausgabe:
+5 bzw. 2 Tage vor Erreichen des Ablaufdatums wird eine Push-Nachricht/Benachrichtigung (E-Mail/Whatsapp-Nachricht,...) ausgelöst und dem User Serviervorschläge ausgeben.
 
 
 ![Ablaufdiagramm](prog2projectv3.jpg)
