@@ -1,4 +1,7 @@
+# PROG2-Projekt
 # Nahrungsmittelbestand mit Ablaufdatum
+DBMVZ18 - PROG2 - HS19 - Rony S. Hanselmann
+
 
 ## Ausgangslage
 Die Lebensmittelverschwendung ist nach wie vor ein heiss diskutiertes Thema auf unserem Planeten. Mengenmäßig machen die Lebensmittelabfälle im Haushalt – also die Menge die über Rest- und Biomüll, Kompost und Kanalisation entsorgt werden den größten Teil der Lebensmittelverluste aus. Ursachen sind vor allem mangelnde Einkaufsplanung, kurzfristige Lebensplanung, nicht sachgerechter Lagerung und Haltbarmachung und missverstandenen Mindesthaltbarkeitsangaben.
