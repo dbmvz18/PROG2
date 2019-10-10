@@ -7,7 +7,7 @@ Im Restmüll sind es insgesamt rund 267.000 Tonnen Lebensmittel im Jahr, wobei G
 Um im eigenen Haushalt etwas dagegen zu unternehmen, soll die folgende zu programmierende Applikation unterstützend zur Verfügung stehen. 
 
 ## Funktion/Projektidee
-Sämtliche Nahrungsmittel werden unmittelbar nach dem Kauf erfasst (Dateneingabe). Hierbei stehen die Werte "Nahrungsmittel" und "Ablaufdatum" im Vordergrund. Somit werden die Nahrungsmittel gespeichert (Datenspeicherung). 5 bzw. 2 Tage vor Ablauf der erfassten Nahrungsmittel wird eine Benachrichtigung generiert (Datenausgabe) und dem User mitgeteilt, welches "Nahrungsmittel" in zwei Tagen das Ablaufdatum erreichen wird. Folgerichtig kann der User entsprechend handeln und das Nahrungsmittel vor dem Ablaufdatum konsumieren. Zudem soll ein Serviervorschlag ausgegeben werden,  welcher mindestens 1x das in zwei Tage ablaufende Nahrungsmittel beinhaltet.
+Sämtliche Nahrungsmittel werden unmittelbar nach dem Kauf erfasst (Dateneingabe). Hierbei stehen die Werte "Nahrungsmittel" und "Ablaufdatum" im Vordergrund. Somit werden die Nahrungsmittel gespeichert (Datenspeicherung). 5 bzw. 2 Tage vor Ablauf der erfassten Nahrungsmittel wird eine Benachrichtigung generiert (Datenausgabe) und dem User mitgeteilt, welches "Nahrungsmittel" in wenigen Tagen das Ablaufdatum erreichen wird. Folgerichtig kann der User entsprechend handeln und das Nahrungsmittel vor dem Ablaufdatum konsumieren. Zudem soll ein Serviervorschlag ausgegeben werden,  welcher mindestens 1x das in ablaufende Nahrungsmittel beinhaltet.
 
 ## Workflow
 
