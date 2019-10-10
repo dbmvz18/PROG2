@@ -1,10 +1,10 @@
 # Nahrungsmittelbestand mit Ablaufdatum
 
 ## Ausgangslage
-Die Lebensmittelverschwendung ist nach wie vor ein heissdiskutiertes Thema auf unserem Planeten. Angeblich sollen 50% der produzierten Lebensmittel weggeworfen werden. Um im eigenen Haushalt etwas dagegen zu unternehmen, soll die folgende zu programmierende Applikation unterstützend zur Verfügung stehen. 
+Die Lebensmittelverschwendung ist nach wie vor ein heiss diskutiertes Thema auf unserem Planeten. Angeblich sollen 50% der produzierten Lebensmittel weggeworfen werden. Um im eigenen Haushalt etwas dagegen zu unternehmen, soll die folgende zu programmierende Applikation unterstützend zur Verfügung stehen. 
 
 ## Funktion/Projektidee
-Sämtliche Nahrungsmittel werden unmittelbar nach dem Kauf erfasst (Dateneingabe). Hierbei stehen die Werte "Nahrungsmittel" und "Ablaufdatum" im Vordergrund. Somit werden die Nahrungsmittel gespeichert (Datenspeicherung). Zwei Tage vor Ablauf der erfassten Nahrungsmittel wird eine Benachrichtigung generiert (Datenausgabe) und dem User mitgeteilt, welches "Nahrungsmittel" in zwei Tagen das Ablaufdatum erreichen wird. Folgerichtig kann der User entsprechend handeln und das Nahrungsmittel vor dem Ablaufdatum konsumieren.
+Sämtliche Nahrungsmittel werden unmittelbar nach dem Kauf erfasst (Dateneingabe). Hierbei stehen die Werte "Nahrungsmittel" und "Ablaufdatum" im Vordergrund. Somit werden die Nahrungsmittel gespeichert (Datenspeicherung). Zwei Tage vor Ablauf der erfassten Nahrungsmittel wird eine Benachrichtigung generiert (Datenausgabe) und dem User mitgeteilt, welches "Nahrungsmittel" in zwei Tagen das Ablaufdatum erreichen wird. Folgerichtig kann der User entsprechend handeln und das Nahrungsmittel vor dem Ablaufdatum konsumieren. Zudem soll ein Serviervorschlag ausgegeben werden,  welcher mindestens 1x das in zwei Tage ablaufende Nahrungsmittel beinhaltet.
 
 ## Workflow
 
@@ -20,4 +20,4 @@ Programmierung: bspw. 2 Tage vor Erreichen des Ablaufdatums wird eine Push-Nachr
 Benachrichtigung (Push-Nachricht, E-Mail) mit Standard-Text und Ablaufdatum (und evtl. Serviervorschläge)
 
 
-![Ablaufdiagramm](Ablaufdiagramm.jpg)
+![Ablaufdiagramm](PROG2project.jpg)
