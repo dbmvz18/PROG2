@@ -23,5 +23,7 @@ Die vom User erfassten Nahrungsmittel generieren die erste Datenbank. Eine zweit
 * Datenausgabe:
 5 bzw. 2 Tage vor Erreichen des Ablaufdatums wird eine Push-Nachricht/Benachrichtigung (E-Mail/Whatsapp-Nachricht,...) ausgelöst und dem User Serviervorschläge ausgeben.
 
+Test
+
 
 ![Ablaufdiagramm](docs/prog2projectv3.jpg)
