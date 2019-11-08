@@ -13,7 +13,6 @@ Um im eigenen Haushalt etwas dagegen zu unternehmen, soll die folgende zu progra
 Sämtliche Nahrungsmittel werden unmittelbar nach dem Kauf erfasst (Dateneingabe). Hierbei stehen die Werte "Nahrungsmittel" und "Ablaufdatum" im Vordergrund. Somit werden die Nahrungsmittel gespeichert (Datenspeicherung). 5 bzw. 2 Tage vor Ablauf der erfassten Nahrungsmittel wird eine Benachrichtigung generiert (Datenausgabe) und dem User mitgeteilt, welches "Nahrungsmittel" in wenigen Tagen das Ablaufdatum erreichen wird. Folgerichtig kann der User entsprechend handeln und das Nahrungsmittel vor dem Ablaufdatum konsumieren. Zudem soll ein Serviervorschlag ausgegeben werden, welcher mindestens 1x das in ablaufende Nahrungsmittel beinhaltet.
 
 ## Workflow
-
 * Dateneingabe:
 Nahrungsmittel erfassen (evtl. mit Bild), Ablaufdatum erfassen
 
@@ -23,7 +22,14 @@ Die vom User erfassten Nahrungsmittel generieren die erste Datenbank. Eine zweit
 * Datenausgabe:
 5 bzw. 2 Tage vor Erreichen des Ablaufdatums wird eine Push-Nachricht/Benachrichtigung (E-Mail/Whatsapp-Nachricht,...) ausgelöst und dem User Serviervorschläge ausgeben.
 
-Test
-
 
 ![Ablaufdiagramm](docs/prog2projectv3.jpg)
+
+
+## Wireframing
+Bevor die Applikation in der html-Sprache umgesetzt wird, dient das nachfolgende Wireframing vorab als Grundlage. 
+
+![Wireframing](docs/wireframing_v1.jpg)
+
+
+
