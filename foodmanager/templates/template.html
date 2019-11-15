@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{url_for('static', filename='bootstrap/css/bootstrap.min.css') }}"> 
+    <!-- Im Falle von persönlichen Anpassungen: Bootstrap wird überschrieben 
+    <link rel="stylesheet" href="{{url_for('static', filename='main.css') }}"> -->
+
+    <title>{% block title %}{% endblock %}</title>
+  </head>
+
+<!-- HTML-Block: Header-->
+{% include "header.html" %}
+
+  <body>
+
+    <main>
+    {% block main %}{% endblock %}
+    </main>
+
+ 
+
+<!-- HTML-Block: Footer -->
+{% include "footer.html" %}
+
+    <!-- Import jquery 3.3.1 slim min -->
+    <script src="{{ url_for('static', filename='js/jquery-3.4.0.slim.min.js') }}"></script>
+    <!-- Import Bootstrap bundle -->
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <!-- Import our custom JavaScript -->
+    <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+
+  </body>
+</html>
+
+
+
+  

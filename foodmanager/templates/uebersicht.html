@@ -1,45 +1,24 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+{% extends "template.html" %}
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="{{url_for('static', filename='bootstrap/css/bootstrap.min.css') }}"> 
-    <!-- Im Falle von persönlichen Anpassungen: Bootstrap wird überschrieben 
-    <link rel="stylesheet" href="{{url_for('static', filename='main.css') }}"> -->
+{% block title %}foodmanager - Übersicht{% endblock %}
 
-    <title>foodmanager - Übersicht</title>
-  </head>
-
-<!-- HTML-Block: Header-->
-{% include "header.html" %}
-
-  <body>
-
-  <div class="jumbotron">
-    <h1 class="display-4">Übersicht - Nahrungsmittelbestand</h1>
-    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-    <hr class="my-4">
-    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-    <a class="btn btn-primary btn-lg" href="#" role="button">get started</a>
-  </div>
-
-  <div class="container">
-
-    <h1></h1>
-
-
-
-  </div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="{{ url_for('static', filename='jquery-3.3.1.slim.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='bootstrap/js/bootstrap.min.js') }}"></script>
-
-<!-- HTML-Block: Footer -->
-{% include "footer.html" %}
-
-  </body>
-</html>
+{% block main %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-12 mb-3">
+            <h1>Übersicht</h1>
+            <hr>
+        </div>
+        {% if dictfoodmanager %}
+            {% for key, value in dictfoodmanager.items() %}
+                <div class="col-12 mb-3">
+                    <h6>{{ value['nahrungsmittel'] }}</h6>
+                    <p>{{ value['ablaufdatum']}}</p>
+                </div>
+            {% endfor %}
+        {% else %}
+                <h3>Keine Nahrungsmittel erfasst</h3>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

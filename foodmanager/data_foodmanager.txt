@@ -1,0 +1,1 @@
+{"Milch": {"nahrungsmittel": "Milch", "ablaufdatum": "20.11.2019"}, "H\u00fcttenk\u00e4se": {"nahrungsmittel": "H\u00fcttenk\u00e4se", "ablaufdatum": "19.11.2019"}}

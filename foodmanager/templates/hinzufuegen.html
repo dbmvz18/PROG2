@@ -1,0 +1,29 @@
+{% extends "template.html" %}
+
+{% block title %}foodmanager - Verwaltung{% endblock %}
+
+{% block main %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-12 mb-3">
+            <h1>Hinzufügen & Entfernen</h1>
+            <hr>
+            <form method="POST">
+                <div class="form-group mt-3">
+                    <label for="nahrungsmittel">Nahrungsmittel</label>
+                    <input type="text" class="form-control" id="name" name="nahrungsmittel" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="ablaufdatum">Ablaufdatum</label>
+                    <input type="text" class="form-control" name="ablaufdatum">
+                  </div>
+                  <button type="submit" class="btn btn-primary">Hinzufügen</button>
+            </form>
+            {% if error %}
+                {{ error }}
+            {% endif %}
+        </div>
+        
+    </div>
+</div>
+{% endblock %}

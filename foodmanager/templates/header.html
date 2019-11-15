@@ -1,28 +1,23 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-	<link rel="stylesheet" href="{{url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
-    <title>Willkommen</title>
-</head>
-
-
-<!-- Navigation -->
 <div class="container">
+	 <br>
+           
 		<ul class="nav">
 		  <li class="nav-item">
-		    <a class="nav-link active" href="{{ url_for('landingpage')}}">Startseite</a>
+		    <a class="nav-link active" href="{{ url_for('index')}}">Startseite</a>
 		  </li>
 		  <li class="nav-item">
-		    <a class="nav-link active" href="{{ url_for('subpage1')}}">Übersicht</a>
+		    <a class="nav-link active" href="{{ url_for('uebersicht')}}">Übersicht</a>
 		  </li>
 		  <li class="nav-item">
-		    <a class="nav-link disabled" href="{{ url_for('subpage2')}}">Subpage2</a>
+		    <a class="nav-link active" href="{{ url_for('hinzufuegen')}}">Verwalten</a>
 		  </li>
 		  <li class="nav-item">
-		    <a class="nav-link disabled" href="{{ url_for('subpage3')}}">Subpage3</a>
+		    <a class="nav-link active" href="{{ url_for('suchen')}}">Suchen</a>
 		  </li>
 		</ul>
+
+		 <hr>
 </div>
-</head>
-</html>
+
+<!-- Header - Navigation -->
 

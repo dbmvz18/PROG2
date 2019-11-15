@@ -1,37 +1,54 @@
 from flask import Flask
-from flask import render_template, url_for, request, redirect, flash
+from flask import render_template
+from flask import redirect
+from flask import request
+from flask import url_for
+
+from libs import data_foodmanager
+
+app = Flask("foodmanager")
 
 
-app = Flask("Hello World")
 
-
-#Beispiel Augabe
-@app.route('/hello_simple')
-def hello_world_simple():
-	return 'Hello, you r the best!'
-
-#Ausgabe/Verlinkung zu html-template "index"
+#Ausgabe/Verlinkung zu html-template "Startseite
+@app.route("/")
 @app.route('/index')
-def landingpage():
+def index():
     return render_template('index.html')
 
-#Ausgabe/Verlinkung zu html-template "Übersicht"
+
+
+#Ausgabe/Verlinkung zu html-template "Übersicht": hier werden sämtliche erfasste Daten, Nahrungsmittel (NM) und Ablaufdatum (AD), ausgegeben
 @app.route('/uebersicht')
-def subpage1():
+def uebersicht():
     return render_template('uebersicht.html')
 
- #Ausgabe/Verlinkung zu html-template "Subpage2"
-@app.route('/apfel')
-def subpage2():
-    return render_template('#')
 
- #Ausgabe/Verlinkung zu html-template "Subpage3"
-@app.route('/banane')
-def subpage3():
-    return render_template('#')
+
+ #Ausgabe/Verlinkung zu html-template "Verwaltung": hier werden die Daten (NM und AD) erfasst und in Dictionary gespeichert
+@app.route('/hinzufuegen', methods=['GET', 'POST'])
+def hinzufuegen():
+    if (request.method == 'POST'):
+        data_foodmanager.eintrag_speichern_von_formular(request.form)
+        return redirect("/")
+    return render_template('hinzufuegen.html')
+
+
+
+#Ausgabe/Verlinkung zu html-template "Suchen"
+@app.route("/suchen/<name>")
+@app.route("/suchen", methods=['GET', 'POST'])
+def suchen(name=None):
+    if (request.method == 'POST'):
+        nahrungsmittel = data_foodmanager.nahrungsmittel_suchen(request.form)
+        print(nahrungsmittel)
+        return render_template("uebersicht.html", dictfoodmanager=nahrungsmittel)
+
+    return render_template("suchen.html")
+
 
 
 
 if __name__ == "__main__":
-	app.run(debug=True, port=5000)
-	
+    app.run(debug=True, port=5000)
+    
