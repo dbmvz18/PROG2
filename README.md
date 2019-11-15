@@ -29,7 +29,7 @@ Die vom User erfassten Nahrungsmittel generieren die erste Datenbank. Eine zweit
 ## Wireframing
 Bevor die Applikation in der html-Sprache umgesetzt wird, dient das nachfolgende Wireframing vorab als Grundlage. 
 
-![Wireframing](docs/wireframing_v1.jpg)
+![Wireframing](docs/wireframing_v2.jpg)
 
 
 
