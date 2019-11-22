@@ -1,23 +1,41 @@
-<div class="container">
-	 <br>
-           
-		<ul class="nav">
-		  <li class="nav-item">
-		    <a class="nav-link active" href="{{ url_for('index')}}">Startseite</a>
-		  </li>
-		  <li class="nav-item">
-		    <a class="nav-link active" href="{{ url_for('uebersicht')}}">Übersicht</a>
-		  </li>
-		  <li class="nav-item">
-		    <a class="nav-link active" href="{{ url_for('hinzufuegen')}}">Verwalten</a>
-		  </li>
-		  <li class="nav-item">
-		    <a class="nav-link active" href="{{ url_for('suchen')}}">Suchen</a>
-		  </li>
-		</ul>
-
-		 <hr>
-</div>
-
 <!-- Header - Navigation -->
+
+<!--<div class="sticky-top"> zusätzliches "div" einfügen am Schluss-->
+	<div class="container">
+		 <br>
+
+
+		 <!-- Navbar -->
+	<nav class="navbar navbar-light bg-light">
+	  <a class="navbar-brand" href="{{ url_for('index')}}">
+	    <img src="fm_logonavbar2.png" width="30" height="30" class="d-inline-block align-top" alt="">
+	    Food-Manager
+	  </a>
+
+	<ul class="nav">
+			  <li class="nav-item">
+			    <a class="nav-link active" href="{{ url_for('index')}}">Startseite</a>
+			  </li>
+			  <li class="nav-item">
+			    <a class="nav-link active" href="{{ url_for('ueber')}}">Über</a>
+			  </li>
+			  <li class="nav-item">
+			    <a class="nav-link active" href="{{ url_for('verwalten')}}">Verwalten</a>
+			  </li>
+			  <li class="nav-item">
+			    <a class="nav-link active" href="{{ url_for('hinzufuegen')}}">Hinzufügen</a>
+			  </li>
+			   <li class="nav-item">
+			    <a class="nav-link active" href="{{ url_for('uebersicht')}}">Übersicht</a>
+			  </li>
+			  <li class="nav-item">
+			    <a class="nav-link active" href="{{ url_for('suchen')}}">Suchen</a>
+			  </li>
+			</ul>
+
+	</nav>
+	           
+			 <hr>
+	</div>
+
 

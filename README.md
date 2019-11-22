@@ -1,4 +1,4 @@
-# Projekt "Food-Manager"
+# Projekt "foodmanager"
 # Nahrungsmittelbestand mit Ablaufdatum
 DBMVZ18 - HS19 - PROG2 - Rony S. Hanselmann
 
