@@ -6,11 +6,11 @@
 <div class="container mt-5">
     <div class="row">
         <div class="col-12 mb-3">
-            <h1>Suchen</h1>
+            <h1>Nahrungsmittel suchen</h1>
             <hr>
             <form method="POST">
                 <div class="form-group mt-3">
-                    <input class="form-control" type="search" placeholder="Nahrungsmittel" name="nahrungsmittel" aria-label="Search">
+                    <input class="form-control" type="search" placeholder="Nahrungsmittel" name="nahrungsmittel" aria-label="Search"> <!--Variable "name" muss mit form_request.get ('name') (data_foodmanagyer.py, Funktion "nahrungsmittel_suchen") übereinstimmen -->
                 </div>
                 <button class="btn btn-outline-success" type="submit">Suchen</button>
             </form>

@@ -33,19 +33,30 @@ def ueber():
 
 #Ausgabe/Verlinkung zu html-template "Verwalten": hier werden sämtliche erfasste Daten, Nahrungsmittel (NM) und Ablaufdatum (AD), ausgegeben. Zugleich können diese hier entfernt werden.
 @app.route('/verwalten')
+@app.route('/verwalten', methods=['GET', 'POST'])
 def verwalten():
     fmdaten = data_foodmanager.data_foodmanager_lesen()
     return render_template('verwalten.html', dictfoodmanager=fmdaten)
 
+    if (request.method == 'POST'):
+            data_foodmanager.eintrag_speichern_von_formular(request.form)
+            return redirect("/verwalten") #Befehl um nach Drücken des "Hinzufügen"-Buttons zu Übersichtsliste zu gelangen
 
 
- #Ausgabe/Verlinkung zu html-template "hinzufügen": hier werden die Daten (NM und AD) erfasst und in Dictionary gespeichert
+
+#Erfassung auf "Verwalten" funktioniert noch nicht
+
+
+
+
+#Ausgabe/Verlinkung zu html-template "hinzufügen": hier werden die Daten (NM und AD) erfasst und in Dictionary gespeichert
 @app.route('/hinzufuegen', methods=['GET', 'POST'])
 def hinzufuegen():
     if (request.method == 'POST'):
         data_foodmanager.eintrag_speichern_von_formular(request.form)
         return redirect("/verwalten") #Befehl um nach Drücken des "Hinzufügen"-Buttons zu Übersichtsliste zu gelangen
     return render_template('hinzufuegen.html')
+
 
 
 

@@ -12,6 +12,8 @@ def data_foodmanager_lesen():
     finally:
         return data
 
+
+
 #Funktion, um Einträge des Benutzers auf "Verwalten" zu schreiben ("w")
 def data_foodmanager_schreiben(daten):
     with open('data_foodmanager.txt', "w", encoding="utf-8") as open_file:
@@ -27,13 +29,6 @@ def eintrag_speichern(nahrungsmittel, ablaufdatum):
     data_foodmanager_schreiben(data_foodmanager)
 
 
-#Funktion, um Einträge des Benutzers zu löschen
-def eintrag_entfernen(id):
-    data_foodmanager = data_foodmanager_lesen()
-    data_foodmanager.pop(id)
-    data_foodmanager_schreiben(data_foodmanager)
-
-
 
 #Funktion, um "neue" Einträge des Benutzers über das Formular entgegenzunehmen und an Funktion "eintrag_speichern" zur definitiven Speicherung weiterzugeben
 def eintrag_speichern_von_formular(form_request):
@@ -43,6 +38,12 @@ def eintrag_speichern_von_formular(form_request):
     eintrag_speichern(nahrungsmittel, ablaufdatum)
 
 
+
+#Funktion, um Einträge des Benutzers zu löschen
+def eintrag_entfernen(id):
+    data_foodmanager = data_foodmanager_lesen()
+    data_foodmanager.pop(id)
+    data_foodmanager_schreiben(data_foodmanager)
 
 
 
