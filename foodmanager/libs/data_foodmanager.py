@@ -1,7 +1,7 @@
 import json
 
 
-#Funktion, um Einträge des Benutzers auf "Übersicht" zu lesen ("r"") und auszugeben
+#Funktion, um Einträge des Benutzers auf "Übersicht" zu lesen ("r) und auszugeben
 def data_foodmanager_lesen():
     data = {}
     try:
@@ -27,7 +27,7 @@ def eintrag_speichern(nahrungsmittel, ablaufdatum):
     data_foodmanager[nahrungsmittel] = {"nahrungsmittel": nahrungsmittel, "ablaufdatum": ablaufdatum}
     print(data_foodmanager)
     data_foodmanager_schreiben(data_foodmanager)
-
+#Variabeln frei wählbar
 
 
 #Funktion, um "neue" Einträge des Benutzers über das Formular entgegenzunehmen und an Funktion "eintrag_speichern" zur definitiven Speicherung weiterzugeben
@@ -54,10 +54,8 @@ def nahrungsmittel_suchen(form_request):
 
     if nahrungsmittel in data_foodmanager:
         return {nahrungsmittel: data_foodmanager[nahrungsmittel]}
+#Variabeln frei wählbar
 
 
-#Funktion, um Einträge des Benutzerse mit Klick auf Entfernen-Button zu löschen
-#def eintrag_entfernen("?"):
-#del dictfoodmanager["?"]
 
 

@@ -1,0 +1,26 @@
+{% extends "template.html" %}
+
+{% block title %}Seite in Bearbeitung{% endblock %}
+
+{% block main %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-12 mb-3">
+            
+        <h1 style="font-size: 40pt">Achtung!</h1>
+        <hr>
+        
+        <img src="static/pics/baustelle.jpeg" width="250" class="img-fluid" alt="Responsive image: Wissen">
+    </div>
+    <div class="container">
+        <p style="font-size: 25pt">Diese Seite ist derzeit nicht verfügbar!<br> Hierbei handelt es sich um einen Prototypen.<br>
+        Vielen Dank für Ihr Verständnis!</p>
+    </div>
+    
+    <div class="container">
+    <a href="{{ url_for('index')}}" class="btn-lg btn-danger">Zurück</a>
+    </div>
+
+
+
+{% endblock %}

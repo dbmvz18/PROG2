@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, session
 from flask import render_template
 from flask import redirect
 from flask import request
@@ -11,6 +11,7 @@ import datetime
 from libs import data_foodmanager
 
 app = Flask("foodmanager")
+app.secret_key ="super secret key"
 
 
 # Anzeige in URL, bspw. .http://127.0.0.1:5000/ueber (@app.route: /, /index, /verwalten, /hinzufuegen, /uebersicht, /suchen)
@@ -54,6 +55,12 @@ def verwalten():
 def hinzufuegen():
     if (request.method == 'POST'):
         data_foodmanager.eintrag_speichern_von_formular(request.form)
+
+#Anzeige eines "Alerts" nach Hinzufügen
+        if request.method == 'POST':
+            flash("Nahrungsmittel erfolgreich hinzugefügt!", "success")
+            return redirect("/verwalten")
+
         return redirect("/verwalten") #Befehl um nach Drücken des "Hinzufügen"-Buttons zu Übersichtsliste zu gelangen
     return render_template('hinzufuegen.html')
 
@@ -66,6 +73,10 @@ def entfernen(id=None):
     if id:
         print(id)
         data_foodmanager.eintrag_entfernen(id)
+
+#Anzeige eines "Alerts" nach Entfernen
+        flash("Nahrungsmittel erfolgreich entfernt!", "success")
+        return redirect("/verwalten")
 
     return redirect(request.referrer) #Befehl, um auf vorherige Seite zurückzukehren
 
@@ -89,6 +100,13 @@ def suchen(name=None):
         return render_template("verwalten.html", dictfoodmanager=nahrungsmittel)
 
     return render_template("suchen.html")
+
+
+
+#Ausgabe/Verlinkung zu html-template "Baustelle"
+@app.route("/Baustelle")
+def baustelle():
+    return render_template('baustelle.html')
 
 
 
