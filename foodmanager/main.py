@@ -4,13 +4,14 @@ from flask import redirect
 from flask import request
 from flask import url_for
 from flask import flash
+import os
 import datetime
-
 
 
 from libs import data_foodmanager
 
 app = Flask("foodmanager")
+#Notwendig um Alerts (flash) zu aktivieren
 app.secret_key ="super secret key"
 
 
@@ -96,20 +97,82 @@ def uebersicht():
 def suchen(name=None):
     if (request.method == 'POST'):
         nahrungsmittel = data_foodmanager.nahrungsmittel_suchen(request.form)
-        print(nahrungsmittel)
-        return render_template("verwalten.html", dictfoodmanager=nahrungsmittel)
+
+#Anzeige eines "Alerts" wenn Benutzereingabe nicht gefunden wird
+        if nahrungsmittel:
+            flash("Nahrungsmittel gefunden!", "success")
+        else:
+            flash("Nahrungsmittel nicht gefunden! Überprüfe deine Eingabe!", "danger")
+
+        return render_template("/verwalten.html", dictfoodmanager=nahrungsmittel)
 
     return render_template("suchen.html")
 
 
 
-#Ausgabe/Verlinkung zu html-template "Baustelle"
+#Ausgabe/Verlinkung zu html-template "Baustelle" (inaktive interne Seite)
 @app.route("/Baustelle")
 def baustelle():
     return render_template('baustelle.html')
 
 
 
+
+#Notification per E-Mail über Python ausgeben (gmail-account)
+from flask import Flask
+from flask_mail import Mail
+from flask_mail import Message
+
+#app.config['DEBUG'] = True
+app.config['TESTING'] = False
+app.config['MAIL_SERVER'] = 'smtp.gmail.com'
+app.config['MAIL_PORT'] = 587
+app.config['MAIL_USE_TLS'] = True
+app.config['MAIL_USE_SSL'] = False
+app.config['MAIL_USERNAME'] = 'rony.hanselmann@gmail.com'
+app.config['MAIL_PASSWORD'] = 'uxhulfusqzatbmno'
+app.config['MAIL_DEFAULT_SENDER'] = 'rony.hanselmann@gmail.com'
+app.config['MAIL_MAX_EMAILS'] = None
+#app.config['MAIL_SUPPRESS_SEND'] = False
+app.config['MAIL_ASCII_ATTACHMENTS'] = False
+
+
+mail = Mail(app)
+#mail = Mail()
+#mail.init_app(app)
+
+
+#Benachrichtigung per E-Mail (Flask-Mail)
+@app.route("/notification")
+def notification():
+
+    msg = Message(
+            subject = 'Food-Manager',
+            recipients = ['rony.hanselmann@adon.li'],
+            body = 'Nahrungsmittel läuft ab!',
+            #date = 'date',
+            #extra_headers = {'nahrungsmittel': 'ablaufdatum'}
+            )
+
+    #msg = Message('Food-Manager', recipients=['rony.hanselmann@adon.li'])
+    #msg.body = "Das ist eine Test-Notification von Rony's Web-Applikation. Bitte nicht antworten!"
+   
+    
+    with app.open_resource('static/pics/notification.jpeg') as notification:
+        msg.attach('static/pics/notification.jpeg', 'image/jpeg', notification.read())
+
+    #mail.send(msg)
+
+    
+
+    return 'Nachricht gesendet!'
+    return render_template('notification.html')
+
+
+#Umleitung zu Startseite, nach Aufrufen nicht vorhandener URLs
+@app.errorhandler(404)
+def page_not_found(e):
+    return redirect('http://127.0.0.1:5000/')  
 
 if __name__ == "__main__":
     app.run(debug=True, port=5000)

@@ -31,7 +31,7 @@
 
     {% endfor %}
         {% else %}
-                <h3>Keine Nahrungsmittel erfasst</h3>
+                <p>Keine Nahrungsmittel erfasst!</p>
         {% endif %}
 
   </tbody>
@@ -58,9 +58,6 @@
                   </div>
                   <button type="submit" class="btn btn-primary">Hinzufügen</button>
             </form>
-            {% if error %}
-                {{ error }}
-            {% endif %}
         </div>
         
     </div>
