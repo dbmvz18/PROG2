@@ -1,5 +1,6 @@
 import json
 import datetime
+import main
 
 
 filename = "data_foodmanager_db.txt"
@@ -66,8 +67,8 @@ def nahrungsmittel_suchen(form_request):
 
 
 
-# Funktion, um Fälligkeit (Ablaufdatum = heute) festzustellen, false mit true zu ersetzen und anschliessend E-Mail versenden
-def runaway():
+# Funktion, um Fälligkeit (Ablaufdatum = heute) festzustellen, "False" mit "True" (Key: benachrichtigung, value: False) zu ersetzen und anschliessend E-Mail versenden
+def avocado():
     data_foodmanager = data_foodmanager_lesen()
     heute = datetime.datetime.today()
 
@@ -76,7 +77,7 @@ def runaway():
         datetime_obj = datetime.datetime.strptime(datetime_str, '%Y-%m-%d')
         if datetime_obj <= heute:
             if not values['benachrichtigung']:
-                main.notification()
+                notification()
 
                 # False wird durch True ersetzt (damit Nachricht bei nächstem Durchlauf nicht erneut gesendet wird)
                 data_foodmanager[key]['benachrichtigung'] = True

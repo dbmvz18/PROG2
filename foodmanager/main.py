@@ -1,4 +1,5 @@
-from flask import Flask, session
+from flask import Flask
+from flask import session
 from flask import render_template
 from flask import redirect
 from flask import request
@@ -11,7 +12,8 @@ from flask_mail import Message
 
 import os
 import data_foodmanager
-#from libs import notification
+
+
 
 app = Flask("foodmanager")
 
@@ -39,11 +41,12 @@ app.secret_key ="super secret key"
 
 
 
+
 #Ausgabe/Verlinkung zu html-template "Startseite"
 @app.route("/")
 @app.route('/index')
 def index():
-    data_foodmanager.runaway()
+    #data_foodmanager.runaway()
     return render_template('index.html')
 
 
@@ -169,8 +172,10 @@ def notification():
 
     mail.send(msg)
 
+
     #return 'Nachricht gesendet!'
     #return render_template('notification.html')
+
 
 
 
