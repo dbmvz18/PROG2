@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{url_for('static', filename='bootstrap/css/bootstrap.min.css') }}"> 
     <!-- Im Falle von persönlichen Anpassungen: Bootstrap wird überschrieben 
-    <link rel="stylesheet" href="{{url_for('static', filename='main.css') }}"> -->
+    <link rel="stylesheet" href="{{url_for('static', filename='bootstrap/css/main.css') }}"> -->
 
     <title>{% block title %}{% endblock %}</title>
   </head>
@@ -46,11 +46,30 @@
 {% include "footer.html" %}
 
     <!-- Import jquery 3.3.1 slim min -->
-    <script src="{{ url_for('static', filename='js/jquery-3.4.0.slim.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='bootstrap/js/jquery-3.4.0.slim.min.js') }}"></script>
     <!-- Import Bootstrap bundle -->
-    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
-    <!-- Import our custom JavaScript -->
-    <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+    <script type="text/javascript"src="{{ url_for('static', filename='bootstrap/js/bootstrap.min.js') }}"></script>
+    <!-- Import custom JavaScript 
+    <script src="{{ url_for('static', filename='bootstrap/js/popper.min.js') }}"></script>-->
+   
+    <!-- Import datetimepicker 
+    <script src="{{ url_for('static', filename='bootstrap/js/jquery.datetimepicker.full.min.js') }}"></script>
+
+    <script>
+        $('#picker').datetimepicker({
+            timepicker: false,
+            datetimepicker: true,
+            format: 'd-m-Y', //formatDate
+            value: '1-8-2019' //defaultDate
+            //weeks: true
+            theme: 'dark',
+            inline: true
+
+        })
+
+    </script>
+
+-->
 
   </body>
 </html>
