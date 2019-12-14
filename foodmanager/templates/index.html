@@ -8,32 +8,37 @@
         <div class="col-12 mb-3">
             <h1>Härzlig willkomma, Brudi!</h1>
             <hr>
-            <p> 
-            Der Food-Manager hilft dir dabei ...
+         
+          <div class="media">
+            <img src="static/pics/home.jpeg" class="mr-3" alt="...">
+            <div class="media-body">
+                Lebensmittelverluste und Lebensmittelabfälle entstehen in der landwirtschaftlichen Produktion, der Lebensmittelindustrie und -verarbeitung, beim Handel, im sogenannten Außer-Haus-Konsum und im <b>privaten Haushalt</b>. Wobei Letzterem der grösste Anteil zuzuschreiben ist, sodass 53 % aller weggeworfenen Lebensmittel dabei auf das Konto der privaten Haushalte gehen. In einem durchschnittlichen Haushalt wird ein Viertel der eingekauften Lebensmittel weggeworfen, vieles davon ungeöffnet. 30 % landen bei Landwirtschaft und Produzenten im Müll, 12 % in der Gastronomie und 5 % im Handel.
+                Leiste nun auch du einen positiven Beitrag bzgl. Lebensmittelverschwendung und profitiere von der Unterstützung des Food-Managers!
+                <br><br>
+                 <i><b>"Der Food-Manager hilft dir dabei deinen Nahrungsmittelbestand vor Erreichen des Ablaufdatums zu konsumieren."</i></b>
+            </div>
+          </div>
 
-            lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-            <!--Medium einfügen (evtl. Karousel (Bildergalerie mit Text) -->
-            <br><br><img src="#" class="img-fluid" alt="Responsive image">
-            <br><br>
-            lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-            </p>
+           
+          <div>
 
-            <h3>Einführung</h3>
-            <p>
-            Auf der Seite "Übersicht" kannst du ... lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-            <br><br><a class="btn btn-success btn-lg" href="{{ url_for('hinzufuegen')}}" role="button">Nahrungsmittel hinzufügen!</a>
-            </p>
-
-            
+                <h3>Einführung</h3>
+                <p>
+                Auf der Seite "Verwalten" kannst du deinen aktuellen Nahrungsmittelbestand einsehen und einzelne Nahrungsmittel entfernen. Hingegen kannst du unter "Hinzufügen" neue Nahrungsmittel einfach in deinen Bestand aufnehmen und erfassen. Wenn du dir einen strukturierten Überblick über all deine Nahrungsmittel verschaffen willst, klicke auf "Übersicht" und überwache deine nächsten fälligen Nahrungsmittel. Die "Übersicht" dient auch dazu, welche Notifications du als nächstes per E-Mail empfängst. Je nach Grösse deines Nahrungsmittelbestandes, kann es vorkommen, dass du evtl. den Überblick verlierst, sodass du mit der Seite "Suchen" schnell und einfach nach einem bereits erfassten Nahrungsmittel recherchieren kannst. Der Food-Manager gibt dir hierbei bekannt, ob dein gesuchtes Lebensmittel erfasst ist oder nicht.
+                <br><br>
+                Viel Spass!
+                <br><br><a class="btn btn-success btn-lg" href="{{ url_for('hinzufuegen')}}" role="button">Nahrungsmittel hinzufügen!</a>
+                </p>
+          </div>
 
 
-<div class="jumbotron">
-  <h1 class="h3">Warum Food-Manager?</h1>
-  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-  <hr class="my-4">
-  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-  <a class="btn btn-primary btn-lg" href="{{ url_for('ueber')}}" role="button">Zur Geschichte</a>
-</div>
+          <div class="jumbotron">
+            <h1 class="h3">Warum Food-Manager?</h1>
+            <p class="lead">Weltweit landet 1/3 der Lebensmittel auf dem Müll.</p>
+            <hr class="my-4">
+            <p>In der EU fallen pro Person geschätzte 173 kg Lebensmittelabfälle und –verluste an. Umgerechnet auf Österreich sind das 143 vollbeladene Sattelschlepper täglich. Lebensmittelabfälle sind ein massives Problem für die Umwelt und es passiert viel zu wenig dagegen.</p>
+            <a class="btn btn-primary btn-lg" href="{{ url_for('ueber')}}" role="button">Zur Geschichte</a>
+          </div>
 
        </div>
     </div>

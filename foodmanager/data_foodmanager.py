@@ -1,5 +1,6 @@
 import json
 import datetime
+from datetime import timedelta
 import main
 
 
@@ -28,7 +29,7 @@ def data_foodmanager_schreiben(daten):
 #Funktion, um Einträge des Benutzers in der Datei "data_foodmanager.txt" zu speichern (Dictionary: Key=Nahrungsmittel, Value=Ablaufdatum)
 def eintrag_speichern(nahrungsmittel, ablaufdatum):
     data_foodmanager = data_foodmanager_lesen()
-    data_foodmanager[nahrungsmittel] = {"nahrungsmittel": nahrungsmittel, "ablaufdatum": ablaufdatum, "benachrichtigung": False}
+    data_foodmanager[nahrungsmittel] = {"nahrungsmittel": nahrungsmittel, "ablaufdatum": ablaufdatum, "benachrichtigung1": False, "benachrichtigung2": False}
     print(data_foodmanager)
     data_foodmanager_schreiben(data_foodmanager)
 #Variabeln frei wählbar
@@ -68,18 +69,30 @@ def nahrungsmittel_suchen(form_request):
 
 
 # Funktion, um Fälligkeit (Ablaufdatum = heute) festzustellen, "False" mit "True" (Key: benachrichtigung, value: False) zu ersetzen und anschliessend E-Mail versenden
-def avocado():
+def runaway():
     data_foodmanager = data_foodmanager_lesen()
     heute = datetime.datetime.today()
+    heute_plus_fuenf = heute + timedelta(days=5)
 
     for key, values in data_foodmanager.items():
         datetime_str = values['ablaufdatum']
         datetime_obj = datetime.datetime.strptime(datetime_str, '%Y-%m-%d')
-        if datetime_obj <= heute:
-            if not values['benachrichtigung']:
-                notification()
+        
+        #1. Benachrichtigung 5 Tage vor Fälligkeit (heute + 5d)
+        if datetime_obj == heute_plus_fuenf:
+            if not values['benachrichtigung1']:
+                main.notification()
 
                 # False wird durch True ersetzt (damit Nachricht bei nächstem Durchlauf nicht erneut gesendet wird)
-                data_foodmanager[key]['benachrichtigung'] = True
+                data_foodmanager[key]['benachrichtigung1'] = True
 
+        #2. Benachrichtigung (heute)
+        if datetime_obj <= heute:
+            if not values['benachrichtigung2']:
+                main.notification()
+
+                # False wird durch True ersetzt (damit Nachricht bei nächstem Durchlauf nicht erneut gesendet wird)
+                data_foodmanager[key]['benachrichtigung2'] = True
+
+       
     data_foodmanager_schreiben(data_foodmanager)

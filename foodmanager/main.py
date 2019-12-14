@@ -39,9 +39,6 @@ app.secret_key ="super secret key"
 # Kommuniziert mit url-for in Navigation (header.html): def: index():, ueber():, verwalten():, hinzufuegen():, uebersicht():, suchen():
 
 
-
-
-
 #Ausgabe/Verlinkung zu html-template "Startseite"
 @app.route("/")
 @app.route('/index')
@@ -70,10 +67,6 @@ def verwalten():
     if (request.method == 'POST'):
             data_foodmanager.eintrag_speichern_von_formular(request.form)
             return redirect("/verwalten") #Befehl um nach Drücken des "Hinzufügen"-Buttons zu Übersichtsliste zu gelangen
-
-
-
-#Erfassung auf "Verwalten" funktioniert noch nicht
 
 
 
@@ -125,22 +118,15 @@ def suchen(name=None):
     if (request.method == 'POST'):
         nahrungsmittel = data_foodmanager.nahrungsmittel_suchen(request.form)
 
-#Anzeige eines "Alerts" wenn Benutzereingabe nicht gefunden wird
+#Anzeige eines "Alerts" wenn Benutzereingabe gefunden wird
         if nahrungsmittel:
             flash("Nahrungsmittel gefunden!", "success")
+#Anzeige eines "Alerts" wenn Benutzereingabe nicht gefunden wird
         else:
             flash("Nahrungsmittel nicht gefunden! Überprüfe deine Eingabe!", "danger")
 
         return render_template("/verwalten.html", dictfoodmanager=nahrungsmittel)
     return render_template("suchen.html")
-
-
-
-
-#Ausgabe/Verlinkung zu html-template "Baustelle" (inaktive interne Seite)
-@app.route("/Baustelle")
-def baustelle():
-    return render_template('baustelle.html')
 
 
 
@@ -177,6 +163,12 @@ def notification():
     #return render_template('notification.html')
 
 
+
+
+#Ausgabe/Verlinkung zu html-template "Baustelle" (inaktive interne Seite: www.food-manager.li (siehe Footer))
+@app.route("/Baustelle")
+def baustelle():
+    return render_template('baustelle.html')
 
 
 

@@ -10,6 +10,8 @@
             <hr>
         </div>
 
+        <img src="static/pics/verwalten.jpeg" class="img-fluid"  alt="Responsive image">
+
 <table class="table table-striped table-dark">
   <thead>
     <tr>
@@ -37,33 +39,6 @@
   </tbody>
 </table>
 
-        
-    </div>
-</div>
-
-
-<div class="container mt-5">
-    <div class="row">
-        <div class="col-12 mb-3">
-            <h1>Nahrungsmittel hinzufügen</h1>
-            <hr>
-            <form method="POST">
-                <div class="form-group mt-3">
-                    <label for="nahrungsmittel">Nahrungsmittel</label>
-                    <input type="text" class="form-control" id="name" name="nahrungsmittel" required> <!--"name" dient zur Identifikation, damit Eingabe im Formular zugeordnet werden kann und folglich korrekt gespeichert/ausgegeben wird -->
-                  </div>
-                  <div class="form-group">
-                    <label for="ablaufdatum">Ablaufdatum</label>
-                    <input type="date" class="form-control" name="ablaufdatum"> <!--"name" dient zur Identifikation, damit Eingabe im Formular zugeordnet werden kann und folglich korrekt gespeichert/ausgegeben wird -->
-                  </div>
-                  <button type="submit" class="btn btn-primary">Hinzufügen</button>
-            </form>
-
-
-            {% if error %}
-                {{ error }}
-            {% endif %}
-        </div>
         
     </div>
 </div>
