@@ -107,6 +107,7 @@ def entfernen(id=None):
 def uebersicht():
     fmdaten = data_foodmanager.data_foodmanager_lesen()
     return render_template('uebersicht.html', dictfoodmanager=fmdaten)
+#Variabeln frei wählbar
 
 
 

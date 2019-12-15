@@ -11,83 +11,92 @@
         </div>
 
 
-<table class="table table-dark">
-  <thead>
-    <tr>
-      <th scope="col">Nahrungsmittel <u><b>abgelaufen</b></u>!</th>
+          <table class="table table-dark">
+            <thead>
+              <tr>
+                <th scope="col">Nahrungsmittel <u><b>abgelaufen</b></u>!</th>
+                
+              </tr>
+            </thead>
+
+                  {% if dictfoodmanager %}
+                      {% for key, value in dictfoodmanager.items() %}
+
+            <tbody>
+              <tr>
+                <td>{{ value['nahrungsmittel'] }}</td>
+                <td>{{ value['ablaufdatum']}}</td>
+              </tr>
+
+              {% endfor %}
+                  {% else %}
+                          <h3>Keine Nahrungsmittel erfasst</h3>
+                  {% endif %}
+
+            </tbody>
+          </table>
+
+      <div>
+        <img src="static/pics/uebersicht1.jpeg" class="img-fluid rounded"  alt="Responsive image" width="300" height="300">
+      </div>
+
+          <table class="table table-danger">
+            <thead>
+              <tr>
+                <th scope="col">Nahrungsmittel laufen <u><b>heute</b></u> ab!</th>
+                
+              </tr>
+            </thead>
+
+                  {% if dictfoodmanager %}
+                      {% for key, value in dictfoodmanager.items() %}
+
+            <tbody>
+              <tr>
+                <td>{{ value['nahrungsmittel'] }}</td>
+                <td>{{ value['ablaufdatum']}}</td>
+              </tr>
+
+              {% endfor %}
+                  {% else %}
+                          <h3>Keine Nahrungsmittel erfasst</h3>
+                  {% endif %}
+
+            </tbody>
+          </table>
+
+    <div>
+    <img src="static/pics/uebersicht.jpeg" class="img-fluid rounded"  alt="Responsive image" width="300" height="300">
+  </div>
+
+        
+          <table class="table table-warning">
+            <thead>
+              <tr>
+                <th scope="col">Nahrungsmittel laufen <u><b>in 5 Tagen</b></u> ab!</th>
+              </tr>
+            </thead>
+
+                  {% if dictfoodmanager %}
+                      {% for key, value in dictfoodmanager.items() %}
+
+            <tbody>
+              <tr>
+                <td>{{ value['nahrungsmittel'] }}</td>
+                <td>{{ value['ablaufdatum']}}</td>
+              </tr>
+
+              {% endfor %}
+                  {% else %}
+                          <h3>Keine Nahrungsmittel erfasst</h3>
+                  {% endif %}
+
+            </tbody>
+          </table>
       
-    </tr>
-  </thead>
 
-        {% if dictfoodmanager %}
-            {% for key, value in dictfoodmanager.items() %}
-
-  <tbody>
-    <tr>
-      <td>{{ value['nahrungsmittel'] }}</td>
-      <td>{{ value['ablaufdatum']}}</td>
-    </tr>
-
-    {% endfor %}
-        {% else %}
-                <h3>Keine Nahrungsmittel erfasst</h3>
-        {% endif %}
-
-  </tbody>
-</table>
-
-<img src="static/pics/uebersicht1.jpeg" class="img-fluid"  alt="Responsive image">
-
-<table class="table table-danger">
-  <thead>
-    <tr>
-      <th scope="col">Nahrungsmittel laufen <u><b>heute</b></u> ab!</th>
-      
-    </tr>
-  </thead>
-
-        {% if dictfoodmanager %}
-            {% for key, value in dictfoodmanager.items() %}
-
-  <tbody>
-    <tr>
-      <td>{{ value['nahrungsmittel'] }}</td>
-      <td>{{ value['ablaufdatum']}}</td>
-    </tr>
-
-    {% endfor %}
-        {% else %}
-                <h3>Keine Nahrungsmittel erfasst</h3>
-        {% endif %}
-
-  </tbody>
-</table>
-
-<img src="static/pics/uebersicht.jpeg" class="img-fluid"  alt="Responsive image">
-
-<table class="table table-warning">
-  <thead>
-    <tr>
-      <th scope="col">Nahrungsmittel laufen <u><b>in 5 Tagen</b></u> ab!</th>
-    </tr>
-  </thead>
-
-        {% if dictfoodmanager %}
-            {% for key, value in dictfoodmanager.items() %}
-
-  <tbody>
-    <tr>
-      <td>{{ value['nahrungsmittel'] }}</td>
-      <td>{{ value['ablaufdatum']}}</td>
-    </tr>
-
-    {% endfor %}
-        {% else %}
-                <h3>Keine Nahrungsmittel erfasst</h3>
-        {% endif %}
-
-  </tbody>
-</table>
+  </div>
+</div>
 
 
 {% endblock %}

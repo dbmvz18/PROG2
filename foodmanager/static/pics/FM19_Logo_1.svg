@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="111" height="30" viewBox="0 0 111 30">
+  <defs>
+    <clipPath id="clip-FM19_Logo_1">
+      <rect width="111" height="30"/>
+    </clipPath>
+  </defs>
+  <g id="FM19_Logo_1" data-name="FM19_Logo – 1" clip-path="url(#clip-FM19_Logo_1)">
+    <rect width="111" height="30" fill="#fff"/>
+    <line id="Line_1" data-name="Line 1" y1="25" x2="24" transform="translate(3.5 2.5)" fill="none" stroke="#707070" stroke-width="0.5"/>
+    <line id="Line_2" data-name="Line 2" x2="24" y2="25" transform="translate(3.5 2.5)" fill="none" stroke="#707070" stroke-width="0.5"/>
+    <text id="F" transform="translate(13 9)" font-size="8" font-family="AvenirNext-Medium, Avenir Next" font-weight="500"><tspan x="0" y="0">F</tspan></text>
+    <text id="M" transform="translate(12 26)" font-size="8" font-family="AvenirNext-Medium, Avenir Next" font-weight="500"><tspan x="0" y="0">M</tspan></text>
+    <text id="_1" data-name="1" transform="translate(4 18)" font-size="8" font-family="AvenirNext-Medium, Avenir Next" font-weight="500"><tspan x="0" y="0">1</tspan></text>
+    <text id="_9" data-name="9" transform="translate(22 18)" font-size="8" font-family="AvenirNext-Medium, Avenir Next" font-weight="500"><tspan x="0" y="0">9</tspan></text>
+    <text id="Food-Manager" transform="translate(35 18)" font-size="10" font-family="AvenirNext-Bold, Avenir Next" font-weight="700"><tspan x="0" y="0">Food-Manager</tspan></text>
+  </g>
+</svg>
