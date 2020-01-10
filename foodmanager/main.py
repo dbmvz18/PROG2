@@ -5,9 +5,10 @@ from flask import redirect
 from flask import request
 from flask import url_for
 from flask import flash
-from datetime import datetime
+import datetime
 from flask_mail import Mail
 from flask_mail import Message
+from datetime import timedelta
 
 
 import os
@@ -43,7 +44,7 @@ app.secret_key ="super secret key"
 @app.route("/")
 @app.route('/index')
 def index():
-    #data_foodmanager.runaway()
+    #data_foodmanager.runaway() (Versenden der Notification, gem. FABOD i. O. hier eingegliederrt)
     return render_template('index.html')
 
 
@@ -106,9 +107,9 @@ def entfernen(id=None):
 @app.route('/uebersicht')
 def uebersicht():
     fmdaten = data_foodmanager.data_foodmanager_lesen()
+
     return render_template('uebersicht.html', dictfoodmanager=fmdaten)
 #Variabeln frei wählbar
-
 
 
 

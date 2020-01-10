@@ -4,8 +4,8 @@ from datetime import timedelta
 import main
 
 
+#Funktion, um Einträge des Benutzers auf "Übersicht" zu lesen ("r") und auszugeben
 filename = "data_foodmanager_db.txt"
-#Funktion, um Einträge des Benutzers auf "Übersicht" zu lesen ("r"") und auszugeben
 def data_foodmanager_lesen():
     data = {}
     try:
