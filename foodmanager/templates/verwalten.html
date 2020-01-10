@@ -19,7 +19,7 @@
       <th scope="col"></th>
     </tr>
   </thead>
-        <!-- For-Schleife auf "Verwaltunen-Html"-->
+        <!-- For-Schleife um Keys (Nahrungsmittel) und Values (Ablaufdaten) von Dictionary (dictfoodmanager) visuell durch Tabelle darzustellen.-->
         {% if dictfoodmanager %}
             {% for key, value in dictfoodmanager.items() %}
 
@@ -27,6 +27,7 @@
     <tr class="bg-info">
       <td>{{ value['nahrungsmittel'] }}</td>
       <td>{{ value['ablaufdatum']}}</td>
+      <!--"Entfernen"-Button, wichtig dabei ist die Definition des  keys, hier als id. "id" wird in den Funktionen "entfernen" bzw. "eintrag_entfernen" benötigt, um erfasster Key aus Dictionary zu löschen-->
       <td><a class="btn btn-danger" href="{{ url_for('entfernen', id=key)}}" role="button">entfernen <img src="static/pics/bin1.svg" class="img-fluid" alt="Responsive image"></a></td>
     </tr>
 
