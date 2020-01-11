@@ -50,5 +50,5 @@ Folgerichtig wurde nachfolgendes Wireframing durchgeführt und nach und nach erg
 ## Diverses
 * Web-Browser: Es wird empfohlen, die Web-Applikation mit dem Browser Firefox aufzurufen, da hier beispielsweise die Animation/Darstellung des Kalenders (beim Erfassen der Ablaufdaten) gewährleistet wird.
 
-* Benachrichtigung: Um das automatische Versenden / Empfangen von E-Mail-Benachrichtigungen zu testen, müssen folgende Punkte beachtet werden. 1. "#" auf Zeile 47 entfernen, um Funktion zu aktivieren. 2. E-Mail-Adresse des Empfängers auf Zeile 149 erfassen. 3. In der Datenbank muss mindestens ein Eintrag vorhanden sein, welcher das heutige Datum (oder heute +5d) aufweist. 4. Durch Aufrufen der Startseite wird E-Mail versendet (kann 1-2 Minuten dauern, da Bild vorhanden).
+* Benachrichtigung: Um das automatische Versenden / Empfangen von E-Mail-Benachrichtigungen zu testen, müssen folgende Punkte beachtet werden. 1. "#" auf Zeile 47 (main.py) entfernen, um Funktion zu aktivieren. 2. E-Mail-Adresse des Empfängers auf Zeile 149 (main.py) erfassen. 3. In der Datenbank muss mindestens ein Eintrag vorhanden sein, welcher das heutige Datum (oder heute +5d) aufweist. 4. Durch Aufrufen der Startseite wird E-Mail versendet (kann 1-2 Minuten dauern, da Bild vorhanden).
 
