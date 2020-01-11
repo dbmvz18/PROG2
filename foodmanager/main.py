@@ -18,7 +18,7 @@ import data_foodmanager
 
 app = Flask("foodmanager")
 
-#Wichtig für E-Mail Notifications, siehe def notification
+#Wichtig für E-Mail Notifications, siehe def notification / def runaway
 app.config['TESTING'] = False
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 587
@@ -44,7 +44,10 @@ app.secret_key ="super secret key"
 @app.route("/")
 @app.route('/index')
 def index():
-    #data_foodmanager.runaway() (Versenden der Notification, gem. FABOD i. O. hier eingegliederrt)
+    #data_foodmanager.runaway() 
+    #Die Funktion "runaway" (=Versand E-Mail-Benachrichtigung) in der Datei "data_foodmanager.py" wurde mit FABOD teils programmiert und anschliessend besprochen.
+    #Einbettung an dieser Stelle gem. FABOD i. O.
+    #Um Auszuprobieren: "#" in Zeile 47 entfernen, E-Mail-Adresse in Zeile 149 einfügen, Applikation starten und auf Startseite klicken (kann 1-2 Minuten dauern, da Bilddatei in Nachricht)
     return render_template('index.html')
 
 
@@ -133,10 +136,9 @@ def suchen(name=None):
 
 
 
-#Automatische Notifikation per E-Mail
+#Automatische Notifikation per E-Mail (Auführung in def index eingebettet (i. O. gem. FABOD)
 mail = Mail(app)
-#mail = Mail()
-#mail.init_app(app)
+
 
 
 #Benachrichtigung per E-Mail (Flask-Mail)
@@ -144,7 +146,7 @@ def notification():
 
     msg = Message(
             subject = 'Food-Manager',
-            recipients = ['rony.hanselmann@adon.li'],
+            recipients = ['rony.hanselmann@adon.li'], #'Fabian.Odoni@fhgr.ch' #(falls Sie es ausprobieren möchten, dauert 1-2 Minuten, da Bilddatei vorhanden)
             body = 'Nahrungsmittel läuft ab!',
             #date = 'date',
             #extra_headers = {'nahrungsmittel': 'ablaufdatum'}
