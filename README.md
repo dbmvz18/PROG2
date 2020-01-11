@@ -36,7 +36,6 @@ Folgerichtig wurde nachfolgendes Wireframing durchgeführt und nach und nach erg
 
 
 ## Anmerkungen bzgl. Bewertungskriterien
-
 * Git pushes: Über das gesamte Projekt hinweg wurden regelmässig und schlussendlich über 40 "Git pushes" durchgeführt. Über die Fessttage bzw. den Jahreswechsel (15. Dezember 2019 - 10. Januar 2020) wurde eine Projektauszeit eingelegt. Auch aus jenem Grund, weil der Meilenstein, das Projekt vor Weihnachten grösstenteils fertiggestellt zu haben, erfolgreich erreicht wurde.
 
 * Dokumentation: Als Haupt-Dokumentation dieses Projekts dient diese vorliegende README-Datei (Projektbeschreibung / Grafiken). Detailierte Überlegungen zu Codes sind in den html- und py-Dateien zufinden. Weitere Details über den Hintergrund, Geschichte sowie einen Walkthrough ist auf der Startseite (index.html) der Web-Applikation nachzulesen.
@@ -46,3 +45,10 @@ Folgerichtig wurde nachfolgendes Wireframing durchgeführt und nach und nach erg
 * Originalität und Qualität des Projekts: Durch Bootstrap in Kombination mit dem Einfügen von Bildern (Bitmojis) konnte etwas Farbe bzw. Leben in die Web-Applikation gebracht werden. Die nachfolgende Grafik stellt die Demonstration des erfolgreichen Versendens/Empfangens einer Benachrichtigung dar.
 
 ![Wireframing](docs/Demo_eMail2.png)
+
+
+## Diverses
+* Web-Browser: Es wird empfohlen, die Web-Applikation mit dem Browser Firefox aufzurufen, da hier beispielsweise die Animation/Darstellung des Kalenders (beim Erfassen der Ablaufdaten) gewährleistet wird.
+
+* Benachrichtigung: Um das automatische Versenden / Empfangen von E-Mail-Benachrichtigungen zu testen, müssen folgende Punkte beachtet werden. 1. "#" auf Zeile 47 entfernen, um Funktion zu aktivieren. 2. E-Mail-Adresse des Empfängers auf Zeile 149 erfassen. 3. In der Datenbank muss mindestens ein Eintrag vorhanden sein, welcher das heutige Datum (oder heute +5d) aufweist. 4. Durch Aufrufen der Startseite wird E-Mail versendet (kann 1-2 Minuten dauern, da Bild vorhanden).
+
