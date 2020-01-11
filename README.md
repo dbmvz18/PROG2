@@ -37,14 +37,12 @@ Folgerichtig wurde nachfolgendes Wireframing durchgeführt und nach und nach erg
 
 ## Anmerkungen bzgl. Bewertungskriterien
 
-* Git pushes: Über das gesamte Projekt hinweg wurden regelmässig und schlussendlich ca. 40 "Git pushes" durchgeführt. Über die Fessttage bzw. den Jahreswechsel (15. Dezember 2019 - 10. Januar 2020) wurde eine Projektauszeit eingelegt. Auch aus jenem Grund, weil der Meilenstein, das Projekt vor Weihnachten grösstenteils fertiggestellt zu haben, erfolgreich erreicht wurde.
+* Git pushes: Über das gesamte Projekt hinweg wurden regelmässig und schlussendlich über 40 "Git pushes" durchgeführt. Über die Fessttage bzw. den Jahreswechsel (15. Dezember 2019 - 10. Januar 2020) wurde eine Projektauszeit eingelegt. Auch aus jenem Grund, weil der Meilenstein, das Projekt vor Weihnachten grösstenteils fertiggestellt zu haben, erfolgreich erreicht wurde.
 
-* Dokumentation: Als Haupt-Dokumentation dieses Projekts dient diese vorliegende README-Datei (Projektbeschreibung / Grafiken). Detailierte Überlegungen zu Codes sind in den html- und py-Dateien zufinden. Weitere Details über den Hintergrund, Geschichte sowie einen Walkthrough ist auf der Startseite (index.html) nachzulesen.
-
-Erklärungen von Überlegungen und Struktur des Codes in Form von Kommentaren und Funktionsbeschreibungen im Code. Eine Projektbeschreibung mit Überlegungen und Entstehungsdetails mit Projektidee und Diagramme. Anleitung oder Walkthrough wie das Projekt installiert und benutzt wird, welche Funktionen vorhanden sind und wie diese eingesetzt werden.
+* Dokumentation: Als Haupt-Dokumentation dieses Projekts dient diese vorliegende README-Datei (Projektbeschreibung / Grafiken). Detailierte Überlegungen zu Codes sind in den html- und py-Dateien zufinden. Weitere Details über den Hintergrund, Geschichte sowie einen Walkthrough ist auf der Startseite (index.html) der Web-Applikation nachzulesen.
 
 * Datenverarbeitung und Ausgabe: Python, Flask, HTML sowie CSS konnten eroflgreich in der Web-Applikation eingebunden werden. So ergmöglicht es dem User sowohl Daten zu erfassen und zu speichern (unter "Hinzufügen") als auch zu verarbeiten, auszugeben und zu löschen (unter "Verwalten") 
 
-* Originalität und Qualität des Projekts: Durch Bootstrap in Kombination mit dem Einfügen von Bildern (Bitmojis) konnte etwas Farbe bzw. Leben in die Web-Applikation gebracht werden.
+* Originalität und Qualität des Projekts: Durch Bootstrap in Kombination mit dem Einfügen von Bildern (Bitmojis) konnte etwas Farbe bzw. Leben in die Web-Applikation gebracht werden. Die nachfolgende Grafik stellt die Demonstration des erfolgreichen Versendens/Empfangens einer Benachrichtigung dar.
 
 ![Wireframing](docs/Demo_eMail2.png)
